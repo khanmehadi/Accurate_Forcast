@@ -8,12 +8,15 @@ let tempEl = document.getElementById('temp1');
 let windEl = document.getElementById('wind1');
 let humidityEl = document.getElementById('humidity1');
 let allDays = document.querySelectorAll('.day');
+let forcastEl = document.querySelector('.forcastEl')
 let API = '71e9f14565a5c020953fdced09fe8e45';
 
 
 // Git items from localstorage
 var historyList = JSON.parse(localStorage.getItem("city")) || [];
- 
+
+
+
 function getDate() {
     let day = dayjs()
     let currentDay = document.getElementById('day');
@@ -26,9 +29,6 @@ function getDate() {
 
 // Render the weather info
 function weatherInfo(city) {
-
-    
-
     getDate();
 
     // Get the input city name
@@ -36,7 +36,7 @@ function weatherInfo(city) {
     cityEl.textContent = city;
 
     // Locate the city object and parse through specific properties to apply to the elements
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${API}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${API}`)
     .then(res => {
         return res.json();
     }).then(data => {
