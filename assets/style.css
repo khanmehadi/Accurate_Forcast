@@ -1,0 +1,59 @@
+body {
+    background:url('./clouds.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    color: white;
+}
+
+.card-container{
+    background-color: cornflowerblue;
+    margin: 5px;
+    padding: 50px;
+    width: 100%;
+}
+
+.current-forcast {
+    border: 2px black solid;
+    background-color: rgb(22, 76, 110);
+    padding: 15px;
+}
+
+#city-search {
+    font-size: 50px;
+}
+
+#five-day-title {
+    color: rgb(21, 21, 22);
+}
+
+.search-btn {
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+    font-size: large;
+    font-weight: bolder;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+
+#city-search {
+    color: black;
+}
+
+.history-el {
+    color: black;
+    background-color: cornflowerblue;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.header {
+    color: black;
+    background-color: rgb(148, 198, 241);
+    width: 100%;
+}
